@@ -2,41 +2,54 @@
 <html>
 <head>
   <title>Birthday Countdown</title>
+
+  <!-- Handwritten aesthetic font -->
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap" rel="stylesheet">
+
   <style>
     body {
       margin: 0;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       background: #fff8f2;
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      flex-direction: column;
-      gap: 20px;
       color: #4a3b2f;
+      gap: 18px;
+      animation: fadeIn 1.2s ease-in-out;
     }
 
-    h1 {
-      font-size: 40px;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    #countdown {
-      font-size: 28px;
-      font-weight: 500;
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     img {
       width: 230px;
       border-radius: 12px;
-      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.18);
+      animation: fadeIn 1.4s ease-in-out;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      font-family: 'Caveat', cursive;
+      font-weight: 500;
+    }
+
+    #countdown {
+      font-size: 24px;
+      font-weight: 500;
+      opacity: 0.9;
+      font-family: "Helvetica Neue", Arial, sans-serif;
     }
   </style>
 </head>
 <body>
 
-  <img src="https://i.pinimg.com/736x/47/46/e8/4746e88a41a85bd91b6a47323587bc81.jpg" alt="Biscoff Cheesecake">
+  <img src="cake.jpg" alt="Biscoff Cheesecake">
 
   <h1>Birthday Loading… Adhish</h1>
   <div id="countdown"></div>
@@ -58,7 +71,7 @@
     }
 
     updateCountdown();
-    setInterval(updateCountdown, 1000 * 60 * 60); // updates every hour
+    setInterval(updateCountdown, 1000 * 60 * 60);
   </script>
 
 </body>
